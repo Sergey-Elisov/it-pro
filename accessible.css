@@ -1,0 +1,578 @@
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #000000 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Убираем отступы у всех основных блоков */
+header, main, footer, section, div, nav,
+.container, .admin-wrapper, .t-wrapper,
+.dashboard-container, .auth-container,
+.edit-container, .admin-container,
+.create-container, .course-layout,
+.breadcrumbs-container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    background: #000000 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Убираем белые боковые поля у сеток */
+.course-layout, .stats-grid, .courses-grid,
+.admin-header, .welcome-header {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #000000 !important;
+}
+
+/* Контейнеры делаем на всю ширину */
+.container, .admin-container, .edit-container,
+.create-container, .auth-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+    box-sizing: border-box !important;
+    background: #000000 !important;
+}
+
+/* Сайдбары — убираем белые поля */
+.admin-sidebar, .t-sidebar, .sidebar {
+    background: #000000 !important;
+    border: 2px solid #ffff00 !important;
+    margin: 0 !important;
+}
+
+/* Убираем белые полосы у шапки и подвала */
+header {
+    margin: 0 !important;
+    padding: 15px 20px !important;
+    background: #000000 !important;
+    border-bottom: 3px solid #ffff00 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+footer {
+    margin: 0 !important;
+    padding: 20px !important;
+    background: #000000 !important;
+    border-top: 3px solid #ffff00 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+*, *::before, *::after {
+    background: #000000 !important;
+    background-image: none !important;
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    outline-color: #ffff00 !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+html, body {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    font-family: Arial, "Times New Roman", serif !important;
+    font-size: 24px !important;
+    line-height: 1.8 !important;
+    letter-spacing: 1px !important;
+}
+
+/* === ЗАГОЛОВКИ === */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #ffff00 !important;
+    font-size: 32px !important;
+    font-weight: bold !important;
+    margin: 25px 0 !important;
+    border-bottom: 3px solid #ffff00 !important;
+    padding-bottom: 10px !important;
+}
+
+h1 { font-size: 40px !important; }
+h2 { font-size: 36px !important; }
+
+/* === ССЫЛКИ === */
+a, a:link, a:visited, a:hover, a:active {
+    color: #ffff00 !important;
+    background: #000000 !important;
+    text-decoration: underline !important;
+    border: 2px solid #ffff00 !important;
+    padding: 4px 8px !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+}
+
+a:hover, a:focus {
+    color: #000000 !important;
+    background: #ffff00 !important;
+    outline: 4px solid #ffff00 !important;
+}
+
+/* === КНОПКИ === */
+button, input[type="submit"], input[type="button"],
+.btn, .btn-submit, .btn-primary, .btn-secondary,
+.btn-success, .btn-danger, .btn-warning, .btn-outline,
+.btn-t, .btn-admin, .btn-login, .btn-register, .btn-logout,
+.btn-catalog, .btn-back, .btn-save, .btn-cancel, .btn-delete {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 3px solid #ffff00 !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    padding: 15px 30px !important;
+    margin: 5px !important;
+    cursor: pointer !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+}
+
+button:hover, .btn:hover {
+    background: #ffff00 !important;
+    color: #000000 !important;
+}
+
+/* === ПОЛЯ ВВОДА === */
+input, textarea, select,
+input[type="text"], input[type="email"], input[type="password"],
+input[type="tel"], input[type="number"], input[type="search"],
+input[type="file"], input[type="checkbox"], input[type="radio"] {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 3px solid #ffff00 !important;
+    font-size: 22px !important;
+    padding: 12px 15px !important;
+    font-family: Arial, sans-serif !important;
+    font-weight: bold !important;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: 4px solid #ffff00 !important;
+    background: #1a1a1a !important;
+}
+
+textarea {
+    min-height: 200px !important;
+}
+
+label {
+    color: #ffff00 !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    display: block !important;
+    margin: 15px 0 8px 0 !important;
+}
+
+/* === ТАБЛИЦЫ === */
+table {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 3px solid #ffff00 !important;
+    font-size: 22px !important;
+    width: 100% !important;
+}
+
+th, td {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 2px solid #ffff00 !important;
+    padding: 15px !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+}
+
+th {
+    background: #1a1a1a !important;
+    text-transform: uppercase !important;
+}
+
+tr:hover {
+    background: #1a1a1a !important;
+}
+
+/* === ИЗОБРАЖЕНИЯ СКРЫВАЕМ === */
+img, picture, svg, video, iframe,
+.course-image, .logo-item img,
+.course-image-placeholder {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* === НАВИГАЦИЯ И ШАПКА === */
+header, nav, .header, .admin-sidebar, .t-sidebar,
+.breadcrumbs-container, .breadcrumbs {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+nav a, nav a:link, nav a:visited {
+    color: #ffff00 !important;
+    background: #000000 !important;
+    border: 2px solid #ffff00 !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    padding: 10px 15px !important;
+    margin: 3px !important;
+}
+
+nav ul ul {
+    background: #000000 !important;
+    border: 3px solid #ffff00 !important;
+}
+
+nav ul ul a {
+    background: #000000 !important;
+    color: #ffff00 !important;
+}
+
+/* === КАРТОЧКИ И КОНТЕЙНЕРЫ === */
+.card, .course-card, .stat-card, .t-card,
+.admin-card, .auth-container, .edit-container,
+.admin-container, .create-container, .form-container,
+.course-header, .welcome-block, .sidebar-card,
+.lesson-card, .modal-content, .message,
+.t-message, .error-msg, .admin-message,
+.dashboard-container, .my-courses, .support-section {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 3px solid #ffff00 !important;
+    padding: 20px !important;
+    margin: 15px !important;
+    font-size: 24px !important;
+}
+
+/* === СПИСКИ === */
+ul, ol, li {
+    color: #ffff00 !important;
+    font-size: 24px !important;
+    line-height: 2 !important;
+}
+
+li {
+    margin: 10px 0 !important;
+    padding: 5px !important;
+}
+
+/* === ПАРАГРАФЫ И ТЕКСТ === */
+p, span, div, small, strong, b, em, i, u {
+    color: #ffff00 !important;
+    font-size: 24px !important;
+    line-height: 1.8 !important;
+}
+
+small {
+    font-size: 20px !important;
+}
+
+/* === БЕЙДЖИ И СТАТУСЫ === */
+.badge, .status-badge, .status-mini,
+.role-badge, .role-admin, .role-teacher, .role-student,
+.badge-new, .badge-in_progress, .badge-resolved,
+.badge-published, .badge-draft {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 3px solid #ffff00 !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    padding: 8px 15px !important;
+}
+
+/* === ПРОГРЕСС-БАРЫ === */
+.progress-bar, .progress-fill, .progress-wrapper {
+    background: #000000 !important;
+    border: 3px solid #ffff00 !important;
+}
+
+.progress-fill {
+    background: #ffff00 !important;
+}
+
+.progress-text {
+    color: #ffff00 !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+}
+
+/* === МОДАЛЬНЫЕ ОКНА === */
+.modal, .modal-content {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 4px solid #ffff00 !important;
+}
+
+.modal-close {
+    color: #ffff00 !important;
+    font-size: 36px !important;
+    border: 2px solid #ffff00 !important;
+    padding: 5px 15px !important;
+}
+
+/* === ХЛЕБНЫЕ КРОШКИ === */
+.breadcrumbs a, .breadcrumbs .current, .breadcrumbs .separator {
+    color: #ffff00 !important;
+    background: #000000 !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+}
+
+/* === ПОИСК === */
+.search-form input {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 3px solid #ffff00 !important;
+    font-size: 22px !important;
+    padding: 12px 20px !important;
+}
+
+/* === КНОПКА ПЕРЕКЛЮЧЕНИЯ ТЕМЫ === */
+#accessibility-toggle {
+    background: #ffff00 !important;
+    color: #000000 !important;
+    border: 3px solid #ffff00 !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    padding: 12px 20px !important;
+}
+
+/* === FOOTER === */
+footer, .footer {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border-top: 3px solid #ffff00 !important;
+    padding: 20px !important;
+    font-size: 22px !important;
+}
+
+/* === ФОРМЫ === */
+form {
+    background: #000000 !important;
+    color: #ffff00 !important;
+}
+
+.form-group {
+    margin: 20px 0 !important;
+}
+
+/* === СПЕЦИАЛЬНЫЕ БЛОКИ === */
+.empty-state, .locked-overlay, .course-description-block {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 3px solid #ffff00 !important;
+    padding: 25px !important;
+    font-size: 24px !important;
+}
+
+/* === УБИРАЕМ ВСЕ ГРАДИЕНТЫ === */
+* {
+    background-image: none !important;
+    background: #000000 !important;
+}
+
+/* === ВЫДЕЛЕНИЕ ТЕКСТА === */
+::selection {
+    background: #ffff00 !important;
+    color: #000000 !important;
+}
+
+::-moz-selection {
+    background: #ffff00 !important;
+    color: #000000 !important;
+}
+
+/* === СКРОЛЛБАР === */
+::-webkit-scrollbar {
+    width: 20px !important;
+    background: #000000 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffff00 !important;
+    border: 2px solid #000000 !important;
+}
+
+/* === КНОПКА ПЕРЕКЛЮЧЕНИЯ ТЕМЫ — ФИКСИРОВАННАЯ В УГЛУ === */
+#accessibility-toggle {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 99999 !important;
+    
+    background: #ffff00 !important;
+    color: #000000 !important;
+    border: 4px solid #ffff00 !important;
+    
+    font-size: 16px !important;
+    font-weight: bold !important;
+    padding: 10px 16px !important;
+    margin: 0 !important;
+    
+    max-width: 240px !important;
+    width: auto !important;
+    height: auto !important;
+    white-space: normal !important;
+    line-height: 1.3 !important;
+    
+    cursor: pointer !important;
+    box-shadow: 0 4px 12px rgba(255, 255, 0, 0.5) !important;
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+#accessibility-toggle:hover,
+#accessibility-toggle:focus {
+    background: #000000 !important;
+    color: #ffff00 !important;
+    border: 4px solid #ffff00 !important;
+    outline: 4px solid #ffff00 !important;
+    transform: none !important;
+}
+
+/* === ШАПКА САЙТА — АДАПТИВНАЯ, МОЖЕТ БЫТЬ В 2 РЯДА === */
+header {
+    margin: 0 !important;
+    padding: 15px 20px !important;
+    background: #000000 !important;
+    border-bottom: 3px solid #ffff00 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    z-index: 1000 !important;
+}
+
+/* Навигация — разрешаем перенос на несколько рядов */
+header nav {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+header nav > ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 8px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #000000 !important;
+}
+
+/* Элементы навигации */
+header nav > ul > li {
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+}
+
+/* Ссылки в навигации — уменьшаем размер */
+header nav > ul > li > a {
+    font-size: 18px !important;
+    padding: 8px 12px !important;
+    white-space: nowrap !important;
+}
+
+/* Кнопки в шапке — уменьшаем */
+header .header-btn {
+    font-size: 16px !important;
+    padding: 8px 14px !important;
+    white-space: nowrap !important;
+}
+
+/* Логотип — уменьшаем */
+header .logo-item img {
+    height: 40px !important;
+    max-width: 150px !important;
+}
+
+/* Форма поиска — переносится на новую строку */
+header .search-form-item {
+    flex-basis: 100% !important;
+    margin-top: 10px !important;
+}
+
+header .search-form {
+    width: 100% !important;
+    max-width: 400px !important;
+}
+
+header .search-form input {
+    width: 100% !important;
+    font-size: 18px !important;
+    padding: 10px 15px !important;
+}
+
+/* Выпадающие меню — адаптируем */
+header nav ul ul {
+    position: absolute !important;
+    background: #000000 !important;
+    border: 3px solid #ffff00 !important;
+    min-width: 200px !important;
+    z-index: 10000 !important;
+}
+
+header nav ul ul a {
+    font-size: 18px !important;
+    padding: 10px 15px !important;
+}
+
+/* === ХЛЕБНЫЕ КРОШКИ — адаптируем === */
+.breadcrumbs-container {
+    margin: 0 !important;
+    padding: 10px 20px !important;
+    background: #000000 !important;
+    border-bottom: 2px solid #ffff00 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.breadcrumbs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    font-size: 18px !important;
+}
+
+/* === НА МОБИЛЬНЫХ УСТРОЙСТВАХ === */
+@media (max-width: 768px) {
+    #accessibility-toggle {
+        top: 10px !important;
+        right: 10px !important;
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+        max-width: 180px !important;
+    }
+    
+    header nav > ul > li > a {
+        font-size: 16px !important;
+        padding: 6px 10px !important;
+    }
+    
+    header .header-btn {
+        font-size: 14px !important;
+        padding: 6px 10px !important;
+    }
+    
+    header .logo-item img {
+        height: 35px !important;
+    }
+}

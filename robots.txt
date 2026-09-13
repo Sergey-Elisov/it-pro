@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию служебных страниц
+Disallow: /login.php
+Disallow: /register.php
+Disallow: /logout.php
+Disallow: /admin.php
+Disallow: /teacher.php
+Disallow: /dashboard.php
+Disallow: /appeal.php
+Disallow: /enroll.php
+Disallow: /lesson.php
+
+# Разрешаем индексацию курсов и статей
+Allow: /course.php
+Allow: /catalog.php
+Allow: /documents.php
+Allow: /trends_2026.php
+Allow: /burnout_it.php
+Allow: /browser_extensions.php
+Allow: /cybersecurity_basics.php
+
+# Указываем путь к карте сайта
+Sitemap: https://it-pro.ru/sitemap.php
+
+# Хост (для Яндекса)
+Host: https://it-pro.ru
