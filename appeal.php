@@ -6,15 +6,37 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
 }
+// Функция для безопасной загрузки переменных из файла .env
+if (!function_exists('loadEnv')) {
+    function loadEnv($path) {
+        if (!file_exists($path)) {
+            die('Критическая ошибка: файл конфигурации .env не найден.');
+        }
+        $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if (empty($line) || strpos($line, '#') === 0) {
+                continue;
+            }
+            $parts = explode('=', $line, 2);
+            if (count($parts) === 2) {
+                $key = trim($parts[0]);
+                $value = trim($parts[1], " \t\n\r\0\x0B\"'");
+                $_ENV[$key] = $value;
+                putenv("$key=$value");
+            }
+        }
+    }
+}
 
-// Настройки БД
-$host = 'localhost';
-$dbname = 'selisooi_t_educa';
-$db_user = 'selisooi_t_educa';
-$db_pass = 'QAZwsx123!@#';
+// Загружаем .env из текущей директории
+loadEnv(__DIR__ . '/.env');
 
-$message = '';
-$messageType = ''; // 'success' или 'error'
+// 3. Получаем настройки БД из переменных окружения
+$host = $_ENV['DB_HOST'] ?? 'localhost';
+$dbname = $_ENV['DB_NAME'];
+$db_user = $_ENV['DB_USER'];
+$db_pass = $_ENV['DB_PASS'];
 
 // Подключение к БД
 try {
