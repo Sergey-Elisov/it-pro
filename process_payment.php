@@ -4,9 +4,37 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_SESSION['user_id'])) {
     header('Location: catalog.php'); exit();
 }
 
-$host = 'localhost'; $dbname = 'selisooi_t_educa';
-$db_user = 'selisooi_t_educa'; $db_pass = 'QAZwsx123!@#';
-$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $db_user, $db_pass);
+//Функция для безопасной загрузки переменных из файла .env
+if (!function_exists('loadEnv')) {
+    function loadEnv($path) {
+        if (!file_exists($path)) {
+            die('Критическая ошибка: файл конфигурации .env не найден.');
+        }
+        $lines = file($path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($lines as $line) {
+            $line = trim($line);
+            if (empty($line) || strpos($line, '#') === 0) {
+                continue;
+            }
+            $parts = explode('=', $line, 2);
+            if (count($parts) === 2) {
+                $key = trim($parts[0]);
+                $value = trim($parts[1], " \t\n\r\0\x0B\"'");
+                $_ENV[$key] = $value;
+                putenv("$key=$value");
+            }
+        }
+    }
+}
+
+// Загружаем .env из текущей директории
+loadEnv(__DIR__ . '/.env');
+
+// 3. Получаем настройки БД из переменных окружения
+$host = $_ENV['DB_HOST'] ?? 'localhost';
+$dbname = $_ENV['DB_NAME'];
+$db_user = $_ENV['DB_USER'];
+$db_pass = $_ENV['DB_PASS'];
 
 $user_id = $_SESSION['user_id'];
 $course_id = $_POST['course_id'] ?? 0;
