@@ -5,18 +5,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-$host = 'localhost'; $dbname = 'selisooi_t_educa';
-$db_user = 'selisooi_t_educa'; $db_pass = 'QAZwsx123!@#';
-$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $db_user, $db_pass);
-
-$course_id = $_GET['course_id'] ?? 0;
-$stmt = $pdo->prepare("SELECT id, title, price FROM courses WHERE id = ? AND is_published = 1");
-$stmt->execute([$course_id]);
-$course = $stmt->fetch(PDO::FETCH_ASSOC);
-
-if (!$course || $course['price'] <= 0) {
-    header('Location: catalog.php'); exit();
-}
+payment.php
 ?>
 <!DOCTYPE html>
 <html lang="ru">
